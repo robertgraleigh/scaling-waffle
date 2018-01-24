@@ -1,3 +1,14 @@
 /*
   custom header component classes and styles
 */
+
+$primary-color: #0099FF;
+$secondary-color: #333333;
+
+primary-header {
+  background-color: $primary-color;
+}
+
+secondary-header {
+  background-color: $secondary-color;
+}

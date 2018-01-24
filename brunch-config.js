@@ -18,6 +18,7 @@ exports.plugins = {
   sass: {
     options: {
       includePaths: [
+        'node_modules/semantic-ui-sass',
         'node_modules/semantic-ui-sass/scss',
         'app/scss/custom'
       ],
@@ -43,7 +44,7 @@ exports.npm = {
   enabled: true,
   compilers: ["babel-brunch"],
   globals: {
-    $: 'jQuery',
-    jQuery: 'jQuery'
+    $: 'jquery',
+    jQuery: 'jquery'
   }
 };
