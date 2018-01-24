@@ -16,7 +16,7 @@
 
     </div>
 
-    <!-- -->
+    <!--
     <nav class="ui top fixed text menu">
       <div class="left menu">
         <div class="header item">
@@ -32,9 +32,10 @@
         </a>
       </div>
     </nav>
+    -->
 
-    <!-- -
-    <nav class="ui top fixed hidden menu">
+    <!-- -->
+    <nav class="ui top fixed menu">
       <div class="left menu">
         <li class="item">
           <a href="index.html">
@@ -85,18 +86,29 @@
         </li>
       </div>
     </nav>
-  -->
 
     <!-- -->
     <div class="pusher">
 
       <!-- custom primary header component -->
-      <div class="primary-header">
+      <div class="primary-header blue segment">
         <a id="header"></a>
         <div class="ui container">
-          <div class="ui one column full grid">
+          <div class="ui two column full grid">
             <div class="column">
-              <h1 class="">Robert G. Raleigh</h1>
+              <h1 class="ui inverted header">Robert G. Raleigh</h1>
+              <p class="inverted">
+                This is the section about Robert G. Raleigh
+              </p>
+              <div class="ui huge primary inverted button">
+                Contact
+              </div>
+              <div class="ui huge primary inverted button">
+                Get started
+              </div>
+            </div>
+            <div class="column">
+              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
             </div>
           </div>
         </div>
@@ -121,6 +133,30 @@
         <div class="twelve wide column">
           <h1 class="">About Robert G. Raleigh</h1>
                         <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
+        </div>
+      </section>
+
+      <section class="">
+        <a id="services-preview"></a>
+        <div class="ui container">
+          <div class="ui two column grid">
+            <div class="column">
+              <h2 class="ui header">We Help Companies and Companions</h2>
+              <p class="">
+                We can give your company superpowers to do things that they never thought possible.
+                Let us delight your customers and empower your needs...through pure data analytics.
+              </p>
+              <h2 class="">
+                We Make Bananas That Can Dance
+              </h2>
+              <p class="">
+                Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
+              </p>
+            </div>
+            <div class="column">
+              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -671,38 +707,175 @@
         </div>
       </section>
 
-      <!-- -->
-      <section class="">
+      <!-- custom contact component -->
+      <section class="contact-section">
         <a id="contact"></a>
         <div class="ui container">
-          <div class="ui grid">
-            <div class="twelve wide column">
-              <h1 class="">Contact</h1>
+          <div class="ui one column grid">
+            <div class="column">
+              <h1 class="ui centered large header">
+                <span class="">Contact</span>
+              </h1>
             </div>
-            <div class="six wide column">
+          </div>
+        </div>
+        <div class="ui container">
+          <div class="ui two column grid">
+            <div class="column">
               Left
             </div>
-            <div class="six wide column">
-              Right
+            <div class="column">
+              <div class="ui card">
+                <div class="content">
+                  <div class="header">Contact Info</div>
+                </div>
+                <div class="content">
+                  <h4 class="ui sub header">Activity</h4>
+                  <div class="ui small feed">
+                    <div class="event">
+                      <div class="content">
+                        <div class="summary">
+                           <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
+                        </div>
+                      </div>
+                    </div>
+                    <div class="event">
+                      <div class="content">
+                        <div class="summary">
+                           <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="event">
+                      <div class="content">
+                        <div class="summary">
+                           <a>Helen Troy</a> added two pictures
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <button class="ui button">Join Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- custom get started component -->
+      <section class="get-started-section">
+        <a id="get-started"></a>
+        <div class="ui container">
+          <div class="ui one column grid">
+            <div class="column">
+              <h1 class="ui centered header">
+                <span class="blue-underline">
+                  Get Started
+                </span>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="ui container">
+          <div class="ui grid">
+            <div class="ui three stackable cards">
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      Let's grab coffee
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">Let's grab coffee</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                    <i class="add icon"></i>
+                    Visit website
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      Let's chat
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">Let's chat</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                    <i class="add icon"></i>
+                    Visit website
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      Send me a note
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">Send a note</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                    <i class="add icon"></i>
+                    Visit website
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- -->
-      <section class="">
-        <a id="get-started"></a>
-        <div class="twelve wide column">
-          <h1 class="">Get Started</h1>
-        </div>
-      </section>
-
-      <!-- -->
-      <footer class="ui inverted vertical footer">
+      <div class="ui inverted vertical footer segment">
         <a id=""></a>
         <div class="ui container">
-          <div class="ui stackable inverted divided equal height stackable grid">
-            <div class="three wide column">
+          <div class="ui one column grid full">
+            <div class="column">
+              <div class="ui horizontal inverted white list">
+                <a href="index.html" class="item">Home</a>
+                <a href="#about" class="item">About</a>
+                <a href="#services" class="item">Services</a>
+                <a href="#resources" class="item">Resources</a>
+                <a href="#blog" class="item">Blog</a>
+                <a href="#contact" class="item">Contact</a>
+                <a href="#get-started" class="item">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui container">
+          <div class="ui stackable inverted equal height stackable three column grid">
+            <div class="column">
               <h4 class="ui inverted header">
                 Test header
               </h4>
@@ -713,7 +886,7 @@
                 <a href="">Test link</a>
               </div>
             </div>
-            <div class="three wide column">
+            <div class="column">
               <h4 class="ui inverted header">
                 Test header
               </h4>
@@ -724,11 +897,14 @@
                 <a href="">Test link</a>
               </div>
             </div>
-            <div class="six wide column">
+            <div class="column">
               <h4 class="ui inverted header">
-                Test Inverted Footer
+                About Robert G. Raleigh
               </h4>
-              <p>
+              <p class="">
+                This is the test paragraph
+              </p>
+              <p class="">
                 This is the test paragraph
               </p>
             </div>
@@ -739,7 +915,7 @@
             </div>
           </div>
         </div>
-      </footer>
+      </div>
 
       <div class="ui modal">
         <i class="close icon"></i>

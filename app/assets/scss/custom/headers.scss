@@ -5,10 +5,14 @@
 $primary-color: #0099FF;
 $secondary-color: #333333;
 
-primary-header {
+.primary-header {
   background-color: $primary-color;
 }
 
-secondary-header {
+.secondary-header {
   background-color: $secondary-color;
+}
+
+.blue-underline {
+  border-bottom: solid 2px #0099FF;
 }
