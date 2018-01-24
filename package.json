@@ -14,6 +14,8 @@
     "auto-reload-brunch": "^2",
     "brunch": "^2",
     "clean-css-brunch": "^2",
+    "jquery": "^3.3.1",
+    "semantic-ui-sass": "^2.2.11",
     "uglify-js-brunch": "^2"
   },
   "main": "index.js",
