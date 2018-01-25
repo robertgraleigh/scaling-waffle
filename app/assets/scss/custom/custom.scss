@@ -1,17 +1,3 @@
-@mixin margin($top, $right, $bottom, $left) {
-  margin-top: $top;
-  margin-right: $right;
-  margin-bottom: $bottom;
-  margin-left: $left;
-};
-
-@mixin padding($top, $right, $bottom, $left) {
-  padding-top: $top;
-  padding-right: $right;
-  padding-bottom: $bottom;
-  padding-left: $left;
-};
-
 .hidden.menu {
   display: none;
 }
@@ -98,5 +84,22 @@
 }
 
 .get-started-section {
-  @include padding(60px, 10px, 60px, 10px);
+  & .ui.centered.header {
+    text-transform: uppercase;
+    & .blue-underline {
+      border-bottom: solid 5px #0099FF;
+    }
+  }
+}
+
+.card-icon {
+  font-size: 5em !important;
+}
+
+.blue-underline {
+  border-bottom: solid 5px #0099FF;
+}
+
+.fa-blue {
+  color: #0066CC;
 }
