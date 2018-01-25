@@ -8,12 +8,98 @@
     <script src="js/app.js" type="text/javascript"></script>
     <script src="js/vendor.js" type="text/javascript"></script>
     <script type="text/javascript">require('initialize');</script>
+    <script>
+    $(document).ready(function() {
+      $('.ui.left.sidebar').sidebar({
+        dimPage: true,
+        transition: 'overlay',
+        exclusive: false,
+        closable: true
+      });
+
+      $('.ui.right.sidebar').sidebar({
+        dimPage: true,
+        transition: 'overlay',
+        exclusive: false,
+        closable: true
+      });
+
+      $('a.left-sidebar-toggle').click(function () {
+        $('.ui.left.sidebar').sidebar('toggle')
+      });
+
+      $('a.right-sidebar-toggle').click(function () {
+        $('#right-sidebar').sidebar('toggle')
+      });
+
+      $('.ui.left.sidebar')
+       .sidebar('attach events', '#left-sidebar-toggle');
+
+      $('.ui.right.sidebar')
+        .sidebar('attach events', '#right-sidebar-toggle');
+      });
+    </script>
   </head>
   <body class="site">
 
-    <!-- -->
-    <div class="ui sidebar">
+    <!-- customized left sidebar menu -->
+    <div id="left-sidebar" class="ui vertical inverted left sidebar menu">
+      <a href="index.html" class="active item">
+        Home
+      </a>
+      <a href="#about" class="item">
+        About
+      </a>
+      <a href="#products" class="item">
+        Products
+      </a>
+      <a href="#services" class="item">
+        Services
+      </a>
+      <a href="#resources" class="item">
+        Resources
+      </a>
+      <a href="#blog" class="item">
+        Blog
+      </a>
+      <a href="#contact" class="item">
+        Contact
+      </a>
+      <a href="#get-started" class="item">
+        Get Started
+      </a>
+    </div>
 
+    <!-- customized right sidebar menu -->
+    <div id="right-sidebar" class="ui vertical inverted right sidebar menu">
+      <a class="uppercase header item">
+        Contact Info
+      </a>
+      <a href="tel:+1503765-9356" class="item">
+        <i class=""></i>&nbsp;+1 (503) 765-9356
+      </a>
+      <a href="mailto:info@robertgraleigh.com" class="item">
+        <i class=""></i>&nbsp;INFO@ROBERTGRALEIGH.COM
+      </a>
+      <a class="uppercase header item">
+        Social Media
+      </a>
+      <a href="https://www.twitter.com/robertgraleigh" class="item" target="_blank">
+        <i class=""></i>&nbsp;TWITTER
+      </a>
+      <a href="https://www.linkedin.com/in/robertgraleigh" class="item" target="_blank">
+        <i class=""></i>&nbsp;LINKEDIN
+      </a>
+      <a href="https://www.github.com/robertgraleigh" class="item" target="_blank">
+        <i class=""></i>&nbsp;GITHUB
+      </a>
+      <a class="item">
+        <address>
+          NXT Industries: Lab <br />
+          1302 SE Martin Luther King Jr Blvd, <br />
+          Portland, OR 97214
+        </address>
+      </a>
     </div>
 
     <!--
@@ -34,8 +120,26 @@
     </nav>
     -->
 
+    <nav class="ui top fixed three item menu">
+      <li class="item">
+        <a id="left-sidebar-toggle" class="ui primary button">
+          <i class="sidebar icon"></i>&nbsp;Menu
+        </a>
+      </li>
+      <li class="item">
+        <a href="index.html" class="ui header">
+          Robert G. Raleigh
+        </a>
+      </li>
+      <li class="item">
+        <a id="right-sidebar-toggle" class="ui primary button">
+          Contact&nbsp;<i class="sidebar icon"></i>
+        </a>
+      </li>
+    </nav>
+
     <!-- -->
-    <nav class="ui top fixed menu">
+    <nav class="ui top fixed menu hidden">
       <div class="left menu">
         <li class="item">
           <a href="index.html">
@@ -84,11 +188,21 @@
             Get Started
           </a>
         </li>
+        <li class="item">
+          <a id="left-sidebar-toggle" class="ui primary button">
+            <i class="sidebar icon"></i>&nbsp;Left Menu
+          </a>
+        </li>
+        <li class="item">
+          <a id="right-sidebar-toggle" class="ui primary button">
+            Right Menu&nbsp;<i class="sidebar icon"></i>
+          </a>
+        </li>
       </div>
     </nav>
 
     <!-- -->
-    <div class="pusher">
+    <div class="dimmed pusher">
 
       <!-- custom primary header component -->
       <div class="primary-header blue segment">
@@ -127,12 +241,27 @@
         </div>
       </div>
 
-      <!-- -->
-      <section class="">
+      <!-- custom about robert component -->
+      <section class="about-robert-section">
         <a id="about-robert"></a>
-        <div class="twelve wide column">
-          <h1 class="">About Robert G. Raleigh</h1>
-                        <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
+        <div class="ui container">
+          <div class="ui one column grid">
+            <div class="column">
+              <h1 class="ui centered header">
+                About Robert G. Raleigh
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="ui container">
+          <div class="ui two column grid">
+            <div class="ui six wide column">
+              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
+            </div>
+            <div class="ui six wide column">
+              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
+            </div>
+          </div>
         </div>
       </section>
 
