@@ -1568,6 +1568,10 @@ fn-args@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fn-args/-/fn-args-1.0.0.tgz#974dafa1aeac4ac7c21fa09cc3b80f650106ed32"
 
+font-awesome@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
+
 for-in@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -3143,6 +3147,10 @@ scss-tokenizer@^0.2.3:
   dependencies:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
+
+semantic-ui-icon@^2.2.12:
+  version "2.2.12"
+  resolved "https://registry.yarnpkg.com/semantic-ui-icon/-/semantic-ui-icon-2.2.12.tgz#47e640e0f10ed4308f548aef0e0373786c56aa2c"
 
 semantic-ui-sass@^2.2.11:
   version "2.2.11"

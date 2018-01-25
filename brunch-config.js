@@ -20,6 +20,7 @@ exports.plugins = {
       includePaths: [
         'node_modules/semantic-ui-sass',
         'node_modules/semantic-ui-sass/scss',
+        'node_modules/font-awesome/scss',
         'app/scss/custom'
       ],
       precision: 8
@@ -28,21 +29,21 @@ exports.plugins = {
   copycat: {
     verbose: true,
     onlyChanged: true,
-    "fonts": [
-
+    'fonts': [
+      'node_modules/font-awesome/fonts'
     ],
-    "images": [
+    'img': [
       "app/assets/img"
     ],
-    "media": [
-      "app/assets/media"
+    'media': [
+      'app/assets/media'
     ]
   }
 };
 
 exports.npm = {
   enabled: true,
-  compilers: ["babel-brunch"],
+  compilers: ['babel-brunch'],
   globals: {
     $: 'jquery',
     jQuery: 'jquery'

@@ -1,8 +1,9 @@
 /*
   main app.scss file
-  use this file to import .scss CSS frameworks
+  use this file to import scss frameworks
 */
 
 @import "semantic-ui";
 @import "./assets/scss/semantic-ui/settings";
 @import "./assets/scss/custom/custom";
+@import "font-awesome";
