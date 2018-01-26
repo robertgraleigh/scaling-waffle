@@ -10,6 +10,15 @@
     <script type="text/javascript">require('initialize');</script>
     <script>
     $(document).ready(function() {
+
+      $('a#show-client-modal').click(function() {
+        $('#client-modal').modal('show')
+      });
+
+      $('a#show-project-modal').click(function() {
+        $('#project-modal').modal('show')
+      });
+
       $('.ui.left.sidebar').sidebar({
         dimPage: true,
         transition: 'overlay',
@@ -152,8 +161,9 @@
 
     <nav class="ui top fixed three item menu">
       <li class="item">
-        <a id="left-sidebar-toggle" class="ui primary button">
-          <i class="fa fa-bars"></i>&nbsp;Menu
+        <a id="left-sidebar-toggle" class="ui grey">
+          <i class="fa fa-bars"></i>
+          Menu
         </a>
       </li>
       <li class="item">
@@ -162,8 +172,9 @@
         </a>
       </li>
       <li class="item">
-        <a id="right-sidebar-toggle" class="ui primary button">
-          Contact&nbsp;<i class="fa fa-comments-o"></i>
+        <a id="right-sidebar-toggle" class="ui grey">
+          Contact
+          <i class="fa fa-comments-o"></i>
         </a>
       </li>
     </nav>
@@ -179,6 +190,11 @@
         <li class="item">
           <a href="#about">
             About
+          </a>
+        </li>
+        <li class="item">
+          <a href="#products">
+            Products
           </a>
         </li>
         <li class="item">
@@ -232,44 +248,79 @@
     </nav>
 
     <!-- -->
-    <div class="dimmed pusher">
+    <div class="pusher">
 
       <!-- custom primary header component -->
-      <div class="primary-header blue segment">
+      <header class="ui blue inverted segment">
         <a id="header"></a>
         <div class="ui container">
           <div class="ui two column full grid">
             <div class="column">
               <h1 class="ui inverted header">Robert G. Raleigh</h1>
-              <p class="inverted">
+              <p class="">
                 This is the section about Robert G. Raleigh
               </p>
-              <div class="ui huge primary inverted button">
+              <a href="#contact" class="ui huge primary inverted button">
                 Contact
-              </div>
-              <div class="ui huge primary inverted button">
+              </a>
+              <a href="#get-started" class="ui huge primary inverted button">
                 Get started
+              </a>
+              <a id="show-client-modal" class="ui huge primary inverted button">
+                Client Modal
+              </a>
+            </div>
+            <div class="column">
+              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="">
+        <a id="services-preview"></a>
+        <div class="ui container">
+          <div class="ui two column grid">
+            <div class="column">
+              <h2 class="ui header">We Help Companies and Companions</h2>
+              <p class="">
+                We can give your company superpowers to do things that they never thought possible.
+                Let us delight your customers and empower your needs...through pure data analytics.
+              </p>
+              <h2 class="">
+                We Make Bananas That Can Dance
+              </h2>
+              <p class="">
+                Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
+              </p>
+            </div>
+            <div class="column">
+              <div class="ui list">
+                <div class="item">
+                  <i class="fa fa-handshake-o fa-5x"></i>
+                  Agile Project Management
+                </div>
+                <div class="item">
+                  <i class="fa fa-handshake-o fa-5x"></i>
+                  Frontend Development
+                </div>
+                <div class="item">
+                  <i class="fa fa-handshake-o fa-5x"></i>
+                  E-Commerce Shops
+                </div>
+                <div class="item">
+                  <i class="fa fa-handshake-o fa-5x"></i>
+                  Technology Consulting
+                </div>
+                <div class="item">
+                  <i class="fa fa-handshake-o fa-5x"></i>
+                  Inline Text
+                </div>
               </div>
             </div>
-            <div class="column">
-              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
-            </div>
           </div>
         </div>
-        <div class="ui container">
-          <div class="ui three column full grid">
-            <div class="column">
-              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
-            </div>
-            <div class="column">
-              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
-            </div>
-            <div class="column">
-              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
 
       <!-- custom about robert component -->
       <section class="about-robert-section">
@@ -319,25 +370,205 @@
         </div>
       </section>
 
-      <section class="">
-        <a id="services-preview"></a>
+      <!-- custom cta-bar component -->
+      <section class="cta-bar">
         <div class="ui container">
-          <div class="ui two column grid">
+          <div class="ui two column padded grid">
             <div class="column">
-              <h2 class="ui header">We Help Companies and Companions</h2>
-              <p class="">
-                We can give your company superpowers to do things that they never thought possible.
-                Let us delight your customers and empower your needs...through pure data analytics.
-              </p>
-              <h2 class="">
-                We Make Bananas That Can Dance
-              </h2>
-              <p class="">
-                Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
-              </p>
+              <h2 class="ui centered uppercase header">Get in touch</h2>
             </div>
             <div class="column">
-              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
+              <a href="#grab-coffee-modal" class="ui primary large button">
+                <i class="fa fa-coffee"></i>&nbsp;Grab coffee
+              </a>
+              <a href="#lets-chat-modal" class="ui primary large button">
+                <i class="fa fa-comments-o"></i>&nbsp;Let's Chat
+              </a>
+              <a href="#send-note-modal" class="ui primary large button">
+                <i class="fa fa-pencil-square-o"></i>&nbsp;Send note
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -->
+      <section class="products">
+        <a id="products"></a>
+        <div class="ui container">
+          <div class="ui one column grid">
+            <div class="column">
+              <h2 class="ui centered header">
+                <span class="blue-underline">
+                  Products
+                </span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="ui container">
+          <div class="ui grid">
+            <div class="ui three stackable cards">
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      Product Name
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">Team Fu &amp; Hess</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-caret-right"></i>
+                  View client
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      Client Name
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">Team Fu &amp; Hess</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-caret-right"></i>
+                  View client
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      Client Name
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">Team Fu &amp; Hess</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-caret-right"></i>
+                  View client
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      Client Name
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">Team Fu &amp; Hess</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-caret-right"></i>
+                  View client
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      Client Name
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">Team Fu &amp; Hess</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-caret-right"></i>
+                  View client
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      Client Name
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">Team Fu &amp; Hess</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-caret-right"></i>
+                  View client
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- custom cta-bar component -->
+      <section class="cta-bar">
+        <div class="ui container">
+          <div class="ui two column padded grid">
+            <div class="column">
+              <h2 class="ui centered uppercase header">Get in touch</h2>
+            </div>
+            <div class="column">
+              <a href="#grab-coffee-modal" class="ui primary large button">
+                <i class="fa fa-coffee"></i>&nbsp;Grab coffee
+              </a>
+              <a href="#lets-chat-modal" class="ui primary large button">
+                <i class="fa fa-comments-o"></i>&nbsp;Let's Chat
+              </a>
+              <a href="#send-note-modal" class="ui primary large button">
+                <i class="fa fa-pencil-square-o"></i>&nbsp;Send note
+              </a>
             </div>
           </div>
         </div>
@@ -347,55 +578,195 @@
       <section class="services">
         <a id="services"></a>
         <div class="ui container">
-          <div class="ui grid">
+          <div class="ui one column grid">
             <div class="column">
-              <h1 class="ui center aligned header">
+              <h2 class="ui centered header">
                 <span class="blue-underline">
                   Services
                 </span>
-              </h1>
+              </h2>
             </div>
           </div>
         </div>
         <div class="ui container">
-          <div class="ui three column full grid">
-            <div class="column">
-              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
-            </div>
-            <div class="column">
-              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
-            </div>
-            <div class="column">
-              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
-            </div>
-          </div>
-        </div>
-        <div class="ui container">
-          <div class="ui three column full grid">
-            <div class="column">
-              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
-            </div>
-            <div class="column">
-              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
-            </div>
-            <div class="column">
-              <img src="http://placehold.it/500x500" class="ui image bordered" alt="Placeholder image" />
+          <div class="ui grid">
+            <div class="ui three stackable cards">
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      Agile Project Management
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">Agile Project Management</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-caret-right"></i>
+                  View client
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      Static Website Development
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">Static Website Development</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-caret-right"></i>
+                  View client
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      CMS Website Development
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">CMS Website Development</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-caret-right"></i>
+                  View client
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      E-Commerce Development
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">E-Commerce Development</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-caret-right"></i>
+                  View client
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      Website Maintenance/Support
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">Website Maintenance/Support</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-caret-right"></i>
+                  View client
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img src="http://placehold.it/400x240" class="visible content">
+                  <div class="hidden content">
+                    <h3 class="header">
+                      Technology Consulting
+                    </h3>
+                    <p class="description">
+                      this is the hidden content
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <a class="header">Technology Consulting</a>
+                  <div class="meta">
+                    <span class="date">Create in Sep 2014</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-caret-right"></i>
+                  View client
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- -->
-      <section class="">
+      <!-- custom cta-bar component -->
+      <section class="cta-bar">
+        <div class="ui container">
+          <div class="ui two column padded grid">
+            <div class="column">
+              <h2 class="ui centered uppercase header">Get in touch</h2>
+            </div>
+            <div class="column">
+              <a href="#grab-coffee-modal" class="ui primary large button">
+                <i class="fa fa-coffee"></i>&nbsp;Grab coffee
+              </a>
+              <a href="#lets-chat-modal" class="ui primary large button">
+                <i class="fa fa-comments-o"></i>&nbsp;Let's Chat
+              </a>
+              <a href="#send-note-modal" class="ui primary large button">
+                <i class="fa fa-pencil-square-o"></i>&nbsp;Send note
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- custom clients component -->
+      <section class="clients">
         <a id="clients"></a>
         <div class="ui container">
           <div class="ui one column grid">
             <div class="column">
-              <h1 class="ui centered header">
+              <h2 class="ui centered uppercase header">
                 <span class="blue-underline">
                   Clients
                 </span>
-              </h1>
+              </h2>
             </div>
           </div>
         </div>
@@ -421,8 +792,7 @@
                   </div>
                 </div>
                 <a href="" class="ui bottom attached inverted primary button">
-                    <i class="add icon"></i>
-                    Visit website
+                  <i class="fa fa-black-tie"></i>&nbsp;View client
                 </a>
               </div>
               <div class="ui card">
@@ -444,8 +814,7 @@
                   </div>
                 </div>
                 <a href="" class="ui bottom attached inverted primary button">
-                    <i class="add icon"></i>
-                    Visit website
+                  <i class="fa fa-black-tie"></i>&nbsp;View client
                 </a>
               </div>
               <div class="ui card">
@@ -467,8 +836,7 @@
                   </div>
                 </div>
                 <a href="" class="ui bottom attached inverted primary button">
-                    <i class="add icon"></i>
-                    Visit website
+                  <i class="fa fa-black-tie"></i>&nbsp;View client
                 </a>
               </div>
               <div class="ui card">
@@ -490,8 +858,7 @@
                   </div>
                 </div>
                 <a href="" class="ui bottom attached inverted primary button">
-                    <i class="add icon"></i>
-                    Visit website
+                  <i class="fa fa-black-tie"></i>&nbsp;View client
                 </a>
               </div>
               <div class="ui card">
@@ -513,8 +880,7 @@
                   </div>
                 </div>
                 <a href="" class="ui bottom attached inverted primary button">
-                    <i class="add icon"></i>
-                    Visit website
+                  <i class="fa fa-black-tie"></i>&nbsp;View client
                 </a>
               </div>
               <div class="ui card">
@@ -536,77 +902,7 @@
                   </div>
                 </div>
                 <a href="" class="ui bottom attached inverted primary button">
-                    <i class="add icon"></i>
-                    Visit website
-                </a>
-              </div>
-              <div class="ui card">
-                <div class="ui slide masked reveal image">
-                  <img src="http://placehold.it/400x240" class="visible content">
-                  <div class="hidden content">
-                    <h3 class="header">
-                      Client Name
-                    </h3>
-                    <p class="description">
-                      this is the hidden content
-                    </p>
-                  </div>
-                </div>
-                <div class="content">
-                  <a class="header">Team Fu &amp; Hess</a>
-                  <div class="meta">
-                    <span class="date">Create in Sep 2014</span>
-                  </div>
-                </div>
-                <a href="" class="ui bottom attached inverted primary button">
-                    <i class="add icon"></i>
-                    Visit website
-                </a>
-              </div>
-              <div class="ui card">
-                <div class="ui slide masked reveal image">
-                  <img src="http://placehold.it/400x240" class="visible content">
-                  <div class="hidden content">
-                    <h3 class="header">
-                      Client Name
-                    </h3>
-                    <p class="description">
-                      this is the hidden content
-                    </p>
-                  </div>
-                </div>
-                <div class="content">
-                  <a class="header">Team Fu &amp; Hess</a>
-                  <div class="meta">
-                    <span class="date">Create in Sep 2014</span>
-                  </div>
-                </div>
-                <a href="" class="ui bottom attached inverted primary button">
-                    <i class="add icon"></i>
-                    Visit website
-                </a>
-              </div>
-              <div class="ui card">
-                <div class="ui slide masked reveal image">
-                  <img src="http://placehold.it/400x240" class="visible content">
-                  <div class="hidden content">
-                    <h3 class="header">
-                      Client Name
-                    </h3>
-                    <p class="description">
-                      this is the hidden content
-                    </p>
-                  </div>
-                </div>
-                <div class="content">
-                  <a class="header">Team Fu &amp; Hess</a>
-                  <div class="meta">
-                    <span class="date">Create in Sep 2014</span>
-                  </div>
-                </div>
-                <a href="" class="ui bottom attached inverted primary button">
-                    <i class="add icon"></i>
-                    Visit website
+                  <i class="fa fa-black-tie"></i>&nbsp;View client
                 </a>
               </div>
             </div>
@@ -629,13 +925,15 @@
       </section>
 
       <!-- -->
-      <section class="">
+      <section class="projects">
         <a id="projects"></a>
         <div class="ui container">
           <div class="ui one column grid">
             <div class="column">
-              <h1 class="ui centered header">
-                Projects
+              <h1 class="ui centered uppercase header">
+                <span class="blue-underline">
+                  Projects
+                </span>
               </h1>
             </div>
           </div>
@@ -643,210 +941,93 @@
         <div class="ui container">
           <div class="ui three stackable cards">
             <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="http://placehold.it/400x240" class="visible content">
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
+              <div class="image">
+                <img src="img/iqcu.png" class="bordered" alt="iQCU Credit Union">
               </div>
               <div class="content">
-                <a class="header">Team Fu &amp; Hess</a>
+                <a class="header">iQCU</a>
                 <div class="meta">
-                  <span class="date">Create in Sep 2014</span>
+                  <span class="date">Enterprise App</span>
                 </div>
               </div>
               <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
+                <i class="fa fa-tasks"></i>&nbsp;
+                View project
               </a>
             </div>
             <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="http://placehold.it/400x240" class="visible content">
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
+              <div class="image">
+                <img src="img/the-house-plan-company.png" class="bordered" alt="The House Plan Company">
               </div>
               <div class="content">
-                <a class="header">Team Fu &amp; Hess</a>
+                <a class="header">The House Plan Company</a>
                 <div class="meta">
-                  <span class="date">Create in Sep 2014</span>
+                  <span class="date">Enterprise App</span>
                 </div>
               </div>
               <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
+                <i class="fa fa-tasks"></i>&nbsp;
+                View project
               </a>
             </div>
             <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="http://placehold.it/400x240" class="visible content">
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
+              <div class="image">
+                <img src="img/bask-media-planner.png" class="bordered" alt="BASK Media Planner">
               </div>
               <div class="content">
-                <a class="header">Team Fu &amp; Hess</a>
+                <a class="header">Bask Media Planner</a>
                 <div class="meta">
-                  <span class="date">Create in Sep 2014</span>
+                  <span class="date">Enterprise App</span>
                 </div>
               </div>
               <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
+                <i class="fa fa-tasks"></i>&nbsp;
+                View project
               </a>
             </div>
             <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="http://placehold.it/400x240" class="visible content">
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
+              <div class="image">
+                <img src="img/collage.png" class="bordered" alt="Collage">
               </div>
               <div class="content">
-                <a class="header">Team Fu &amp; Hess</a>
+                <a class="header">Collage</a>
                 <div class="meta">
-                  <span class="date">Create in Sep 2014</span>
+                  <span class="date">E-Commerce</span>
                 </div>
               </div>
               <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
+                <i class="fa fa-tasks"></i>&nbsp;
+                View project
               </a>
             </div>
             <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="http://placehold.it/400x240" class="visible content">
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
+              <div class="image">
+                <img src="img/epic-people.png" class="bordered" alt="EPIC People">
               </div>
               <div class="content">
-                <a class="header">Team Fu &amp; Hess</a>
+                <a class="header">Epic People</a>
                 <div class="meta">
-                  <span class="date">Create in Sep 2014</span>
+                  <span class="date">CMS Website</span>
                 </div>
               </div>
               <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
+                <i class="fa fa-tasks"></i>&nbsp;
+                View project
               </a>
             </div>
             <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="http://placehold.it/400x240" class="visible content">
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
+              <div class="image">
+                <img src="img/cambia-grove.png" class="bordered" alt="Cambia Grove">
               </div>
               <div class="content">
-                <a class="header">Team Fu &amp; Hess</a>
+                <a class="header">Cambia Grove</a>
                 <div class="meta">
-                  <span class="date">Create in Sep 2014</span>
+                  <span class="date">CMS Website</span>
                 </div>
               </div>
               <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
-              </a>
-            </div>
-            <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="http://placehold.it/400x240" class="visible content">
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
-              </div>
-              <div class="content">
-                <a class="header">Team Fu &amp; Hess</a>
-                <div class="meta">
-                  <span class="date">Create in Sep 2014</span>
-                </div>
-              </div>
-              <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
-              </a>
-            </div>
-            <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="http://placehold.it/400x240" class="visible content">
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
-              </div>
-              <div class="content">
-                <a class="header">Team Fu &amp; Hess</a>
-                <div class="meta">
-                  <span class="date">Create in Sep 2014</span>
-                </div>
-              </div>
-              <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
-              </a>
-            </div>
-            <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="http://placehold.it/400x240" class="visible content">
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
-              </div>
-              <div class="content">
-                <a class="header">Team Fu &amp; Hess</a>
-                <div class="meta">
-                  <span class="date">Create in Sep 2014</span>
-                </div>
-              </div>
-              <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
+                <i class="fa fa-tasks"></i>&nbsp;
+                View project
               </a>
             </div>
           </div>
@@ -858,10 +1039,12 @@
         <div class="ui container">
           <div class="ui two column padded grid">
             <div class="column">
-              <h2 class="ui centered header">View all project</h2>
+              <h2 class="ui centered uppercase header">View all projects</h2>
             </div>
             <div class="column">
-              <a href="" class="ui primary button">View projects</a>
+              <a id="show-project-modal" class="ui huge primary inverted button">
+                <i class="fa fa-tasks"></i>&nbsp;View all projects
+              </a>
             </div>
           </div>
         </div>
@@ -888,6 +1071,120 @@
                 <img src="http://placehold.it/400x240" class="visible content">
                 <div class="hidden content">
                   <h3 class="header">
+                    Languages
+                  </h3>
+                  <ul>
+                    <li>
+                      HTML5
+                    </li>
+                    <li>
+                      CSS3
+                    </li>
+                    <li>
+                      Javascript
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content">
+                <a class="header">Languages</a>
+                <div class="meta">
+                  <span class="date">Create in Sep 2014</span>
+                </div>
+              </div>
+            </div>
+            <div class="ui card">
+              <div class="ui slide masked reveal image">
+                <img src="http://placehold.it/400x240" class="visible content">
+                <div class="hidden content">
+                  <h3 class="header">
+                    Client Name
+                  </h3>
+                  <ul>
+                    <li>
+                      Sass
+                    </li>
+                    <li>
+                      Less
+                    </li>
+                    <li>
+                      Stylus
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content">
+                <a class="header">CSS Preprocessors</a>
+                <div class="meta">
+                  <span class="date">Create in Sep 2014</span>
+                </div>
+              </div>
+            </div>
+            <div class="ui card">
+              <div class="ui slide masked reveal image">
+                <img src="http://placehold.it/400x240" class="visible content">
+                <div class="hidden content">
+                  <h3 class="header">
+                    Client Name
+                  </h3>
+                  <ul>
+                    <li>
+                      Bootstrap
+                    </li>
+                    <li>
+                      Foundation
+                    </li>
+                    <li>
+                      Semantic UI
+                    </li>
+                    <li>
+                      Material CSS
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content">
+                <a class="header">CSS Frameworks</a>
+                <div class="meta">
+                  <span class="date">Create in Sep 2014</span>
+                </div>
+              </div>
+            </div>
+            <div class="ui card">
+              <div class="ui slide masked reveal image">
+                <img src="http://placehold.it/400x240" class="visible content">
+                <div class="hidden content">
+                  <h3 class="header">
+                    Client Name
+                  </h3>
+                  <ul>
+                    <li>
+                      Bootstrap
+                    </li>
+                    <li>
+                      Foundation
+                    </li>
+                    <li>
+                      Semantic UI
+                    </li>
+                    <li>
+                      Material CSS
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content">
+                <a class="header">JS Frameworks</a>
+                <div class="meta">
+                  <span class="date">Create in Sep 2014</span>
+                </div>
+              </div>
+            </div>
+            <div class="ui card">
+              <div class="ui slide masked reveal image">
+                <img src="http://placehold.it/400x240" class="visible content">
+                <div class="hidden content" style="padding: 5px;">
+                  <h3 class="header">
                     Client Name
                   </h3>
                   <p class="description">
@@ -901,10 +1198,6 @@
                   <span class="date">Create in Sep 2014</span>
                 </div>
               </div>
-              <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
-              </a>
             </div>
             <div class="ui card">
               <div class="ui slide masked reveal image">
@@ -924,101 +1217,27 @@
                   <span class="date">Create in Sep 2014</span>
                 </div>
               </div>
-              <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
-              </a>
             </div>
-            <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="http://placehold.it/400x240" class="visible content">
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
-              </div>
-              <div class="content">
-                <a class="header">Team Fu &amp; Hess</a>
-                <div class="meta">
-                  <span class="date">Create in Sep 2014</span>
-                </div>
-              </div>
-              <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
-              </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- custom cta-bar component -->
+      <section class="cta-bar">
+        <div class="ui container">
+          <div class="ui two column padded grid">
+            <div class="column">
+              <h2 class="ui centered uppercase header">Get in touch</h2>
             </div>
-            <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="http://placehold.it/400x240" class="visible content">
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
-              </div>
-              <div class="content">
-                <a class="header">Team Fu &amp; Hess</a>
-                <div class="meta">
-                  <span class="date">Create in Sep 2014</span>
-                </div>
-              </div>
-              <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
+            <div class="column">
+              <a href="#grab-coffee-modal" class="ui primary large button">
+                <i class="fa fa-coffee"></i>&nbsp;Grab coffee
               </a>
-            </div>
-            <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="http://placehold.it/400x240" class="visible content">
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
-              </div>
-              <div class="content">
-                <a class="header">Team Fu &amp; Hess</a>
-                <div class="meta">
-                  <span class="date">Create in Sep 2014</span>
-                </div>
-              </div>
-              <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
+              <a href="#lets-chat-modal" class="ui primary large button">
+                <i class="fa fa-comments-o"></i>&nbsp;Let's Chat
               </a>
-            </div>
-            <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="http://placehold.it/400x240" class="visible content">
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
-              </div>
-              <div class="content">
-                <a class="header">Team Fu &amp; Hess</a>
-                <div class="meta">
-                  <span class="date">Create in Sep 2014</span>
-                </div>
-              </div>
-              <a href="" class="ui bottom attached inverted primary button">
-                  <i class="add icon"></i>
-                  Visit website
+              <a href="#send-note-modal" class="ui primary large button">
+                <i class="fa fa-pencil-square-o"></i>&nbsp;Send note
               </a>
             </div>
           </div>
@@ -1031,11 +1250,11 @@
         <div class="ui container">
           <div class="ui grid">
             <div class="sixteen wide column">
-              <h1 class="ui centered large header">
+              <h2 class="ui centered large uppercase header">
                 <span class="blue-underline">
                   Blog
                 </span>
-              </h1>
+              </h2>
             </div>
           </div>
         </div>
@@ -1053,60 +1272,71 @@
         </div>
       </section>
 
+      <!-- custom cta-bar component -->
+      <section class="cta-bar">
+        <div class="ui container">
+          <div class="ui two column padded grid">
+            <div class="column">
+              <h2 class="ui centered uppercase header">Get in touch</h2>
+            </div>
+            <div class="column">
+              <a href="#grab-coffee-modal" class="ui primary large button">
+                <i class="fa fa-coffee"></i>&nbsp;Grab coffee
+              </a>
+              <a href="#lets-chat-modal" class="ui primary large button">
+                <i class="fa fa-comments-o"></i>&nbsp;Let's Chat
+              </a>
+              <a href="#send-note-modal" class="ui primary large button">
+                <i class="fa fa-pencil-square-o"></i>&nbsp;Send note
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- custom contact component -->
       <section class="contact-section">
         <a id="contact"></a>
         <div class="ui container">
           <div class="ui one column grid">
             <div class="column">
-              <h1 class="ui centered large header">
+              <h2 class="ui centered large uppercase header">
                 <span class="blue-underline">Contact</span>
-              </h1>
-              <h2 class="ui centered header">
-                Please feel free to email me with questions or opportunities you have. I will provide an initial response within one business day.
               </h2>
+              <h3 class="ui centered header">
+                Please feel free to email me with questions or opportunities you have. I will provide an initial response within one business day.
+              </h3>
             </div>
           </div>
         </div>
         <div class="ui container">
           <div class="ui grid">
-            <div class="six wide column">
-              <img src="img/pioneer-square-street-signs.jpg" class="thumbnail" alt="Pioneer Square Street Signs" />
+            <div class="ui six wide column">
+              <img src="img/460x310.png" class="bordered" alt="Pioneer Square Street Signs" />
             </div>
-            <div class="six wide column">
-              <div class="ui card">
-                <div class="content">
-                  <div class="header">Contact Info</div>
-                </div>
-                <div class="content">
-                  <h4 class="ui sub header">Activity</h4>
-                  <div class="ui small feed">
-                    <div class="event">
-                      <div class="content">
-                        <div class="summary">
-                           <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-                        </div>
-                      </div>
-                    </div>
-                    <div class="event">
-                      <div class="content">
-                        <div class="summary">
-                           <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="event">
-                      <div class="content">
-                        <div class="summary">
-                           <a>Helen Troy</a> added two pictures
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="extra content">
-                  <button class="ui button">Join Project</button>
-                </div>
+            <div class="ui six wide column">
+              <div class="ui raised very padded text container segment">
+                <h2 class="ui header">
+                  Contact Information
+                </h2>
+                <p>
+                  I'm Robert G. Raleigh — an agile IT project manager &amp; frontend developer working in Portland, OR with 10+ years of combined project management,
+                  team leadership roles, and technology consulting experience since 2004.
+                </p>
+                <p>
+                  I'll contract directly with your digital agency, or forward-thinking small-to-mid-size business to help your team plan, iterate, development, launch, and maintain your ongoing or upcoming small and large-scale technology projects.
+                </p>
+                <p>
+                  Throughout my career, I've launched more than 100+ enterprise apps, mobile apps, custom CMS websites, e-commerce stores, and static sites, managing a client roster of 5 &ndash; 7 projects, with budgets ranging from $5,000 &ndash; $250,000.
+                </p>
+                <p>
+                  I hold a Bachelor's Degree in English, from Portland State University, with a concentration in professional writing.
+                  I've also completed additional Management/Supervisory Development training at Portland Community College in project management and leadership.
+                </p>
+                <p>
+                  Outside of work, I’m passionate about songwriting,slide blues guitar, and intergenerational learning.
+                  Most Sundays, I can be found in the yellow or blue room at Powell’s Books, looking for the next great mystery or short story writer.
+                </p>
               </div>
             </div>
           </div>
@@ -1114,19 +1344,19 @@
       </section>
 
       <!-- custom get started component -->
-      <section class="get-started-section">
+      <section class="get-started">
         <a id="get-started"></a>
         <div class="ui container">
           <div class="ui one column grid">
             <div class="column">
-              <h1 class="ui centered header">
+              <h2 class="ui centered uppercase header">
                 <span class="blue-underline">
                   Get Started
                 </span>
-              </h1>
-              <h2 class="ui centered header">
-                I look forward to working with you, and identifying a strong path forward to solve your project management, and frontend development problems.
               </h2>
+              <h3 class="ui centered header">
+                I look forward to working with you, and identifying a strong path forward to solve your project management, and frontend development problems.
+              </h3>
             </div>
           </div>
         </div>
@@ -1134,22 +1364,6 @@
           <div class="ui grid">
             <div class="ui three stackable cards">
               <div class="ui card">
-                <div class="ui slide masked reveal image">
-                  <p class="card-icon visible content">
-                    <span class="fa-stack fa-lg">
-                      <i class="fa fa-circle fa-blue fa-stack-2x"></i>
-                      <i class="fa fa-coffee fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </p>
-                  <div class="hidden content">
-                    <h3 class="header">
-                      Let's grab coffee
-                    </h3>
-                    <p class="description">
-                      this is the hidden content
-                    </p>
-                  </div>
-                </div>
                 <div class="content">
                   <p class="card-icon text-center">
                     <span class="fa-stack fa-lg">
@@ -1157,7 +1371,7 @@
                       <i class="fa fa-envelope-open fa-stack-1x fa-inverse"></i>
                     </span>
                   </p>
-                  <a class="header">Get coffee</a>
+                  <h3 class="header text-center">Get coffee</h3>
                   <p class="card-description text-center">
                     Let's grab a fresh cup of coffee, and discuss your new project or opportunity.
                   </p>
@@ -1168,25 +1382,15 @@
                 </a>
               </div>
               <div class="ui card">
-                <div class="ui slide masked reveal image">
-                  <p class="visible content">
+                <div class="content">
+                  <p class="card-icon centered text-center">
                     <span class="fa-stack fa-lg">
-                      <i class="fa fa-circle fa-blue fa-stack-2x"></i>
-                      <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                      <i class="fa fa-square fa-blue fa-stack-2x"></i>
+                      <i class="fa fa-envelope-open fa-stack-1x fa-inverse"></i>
                     </span>
                   </p>
-                  <div class="hidden content">
-                    <h3 class="header">
-                      Let's chat
-                    </h3>
-                    <p class="description">
-                      this is the hidden content
-                    </p>
-                  </div>
-                </div>
-                <div class="content">
-                  <a class="header">Let's chat</a>
-                  <p>
+                  <h3 class="header text-center">Let's chat</h3>
+                  <p class="text-center">
                     Let's talk, and you can get me up to speed on the problem you need solved.
                   </p>
                 </div>
@@ -1197,16 +1401,16 @@
               </div>
               <div class="ui card">
                 <div class="content">
-                  <p class="card-icon centered center-text">
+                  <p class="card-icon centered text-center">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-square fa-blue fa-stack-2x"></i>
                       <i class="fa fa-envelope-open fa-stack-1x fa-inverse"></i>
                     </span>
                   </p>
-                  <a class="header">Send a note</a>
-                  <div class="meta">
-                    <span class="date">Create in Sep 2014</span>
-                  </div>
+                  <h3 class="header text-center">Send a note</h3>
+                  <p class="text-center">
+                    Fill me in with some more project details and the challenges you're facing.
+                  </p>
                 </div>
                 <a href="" class="ui bottom attached inverted primary button">
                     <i class="fa fa-pencil-square-o"></i>
@@ -1308,6 +1512,345 @@
                 &copy; Copyright 2004 - <script> document.write(new Date().getFullYear());</script>.
                 RGR Digital, LLC. All rights reserved. Built with <i class="fa fa-heart"></i> in PDX.
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- custom client-modal component -->
+      <div id="client-modal" class="ui modal">
+        <i class="fa fa-window-close"></i>
+        <div class="header">Clients</div>
+        <div class="content">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+
+      <!-- custom project-modal component -->
+      <div id="project-modal" class="ui modal">
+        <div class="header">
+          Projects
+        </div>
+        <div class="scrolling content">
+          <div class="ui container">
+            <div class="ui three stackable cards">
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/iqcu.png" class="bordered" alt="iQCU Credit Union">
+                </div>
+                <div class="content">
+                  <a class="header">iQCU</a>
+                  <div class="meta">
+                    <span class="date">Enterprise App</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/the-house-plan-company.png" class="bordered" alt="The House Plan Company">
+                </div>
+                <div class="content">
+                  <a class="header">The House Plan Company</a>
+                  <div class="meta">
+                    <span class="date">Enterprise App</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/bask-media-planner.png" class="bordered" alt="BASK Media Planner">
+                </div>
+                <div class="content">
+                  <a class="header">Bask Media Planner</a>
+                  <div class="meta">
+                    <span class="date">Enterprise App</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/collage.png" class="bordered" alt="Collage">
+                </div>
+                <div class="content">
+                  <a class="header">Collage</a>
+                  <div class="meta">
+                    <span class="date">E-Commerce</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/epic-people.png" class="bordered" alt="EPIC People">
+                </div>
+                <div class="content">
+                  <a class="header">Epic People</a>
+                  <div class="meta">
+                    <span class="date">CMS Website</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/cambia-grove.png" class="bordered" alt="Cambia Grove">
+                </div>
+                <div class="content">
+                  <a class="header">Cambia Grove</a>
+                  <div class="meta">
+                    <span class="date">CMS Website</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/willamette-angel-conference.png" class="bordered" alt="Willamette Angel Conference">
+                </div>
+                <div class="content">
+                  <a class="header">Willamette Angel Conference</a>
+                  <div class="meta">
+                    <span class="date">Project Management</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/associated-designs.png" class="bordered" alt="Associated Designs">
+                </div>
+                <div class="content">
+                  <a class="header">Associated Designs</a>
+                  <div class="meta">
+                    <span class="date">Enterprise App</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/willamette-innovators.png" class="bordered" alt="Willamette Innovator's ">
+                </div>
+                <div class="content">
+                  <a class="header">Willamette Innovator's</a>
+                  <div class="meta">
+                    <span class="date">Project Management</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/artistic-caststone.png" class="bordered" alt="Artistic Caststone">
+                </div>
+                <div class="content">
+                  <a class="header">Artistic Caststone</a>
+                  <div class="meta">
+                    <span class="date">E-Commerce</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/solar-4-schools.png" class="bordered" alt="Solar 4 Schools">
+                </div>
+                <div class="content">
+                  <a class="header">Solar 4 Schools</a>
+                  <div class="meta">
+                    <span class="date">Enterprise App</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/hispanic-metropolitan-chamber.png" class="bordered" alt="Hispanic Metropolitan Chamber">
+                </div>
+                <div class="content">
+                  <a class="header">Hispanic Metro Chamber</a>
+                  <div class="meta">
+                    <span class="date">Project Management</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/corvallis-chamber-of-commerce.png" class="bordered" alt="Corvallis Chamber of Commerce">
+                </div>
+                <div class="content">
+                  <a class="header">Corvallis Chamber</a>
+                  <div class="meta">
+                    <span class="date">Project Management</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/proud-ground.png" class="bordered" alt="Proud Ground">
+                </div>
+                <div class="content">
+                  <a class="header">Proud Ground</a>
+                  <div class="meta">
+                    <span class="date">CMS Website</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/proud-ground.png" class="bordered" alt="David Douglas SD">
+                </div>
+                <div class="content">
+                  <a class="header">David Douglas SD</a>
+                  <div class="meta">
+                    <span class="date">Project Management</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/nw-realty-sign.png" class="bordered" alt="NW Realty Sign">
+                </div>
+                <div class="content">
+                  <a class="header">NW Realty Sign</a>
+                  <div class="meta">
+                    <span class="date">Enterprise App</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/dorado-sound.png" class="bordered" alt="Dorado Sound">
+                </div>
+                <div class="content">
+                  <a class="header">Dorado Sound</a>
+                  <div class="meta">
+                    <span class="date">CMS Website</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/standard-home-inspections.png" class="bordered" alt="Dorado Sound">
+                </div>
+                <div class="content">
+                  <a class="header">Standard Home Inspectors</a>
+                  <div class="meta">
+                    <span class="date">Technology Consulting</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/win-expo.png" class="bordered" alt="Win Expo">
+                </div>
+                <div class="content">
+                  <a class="header">WIN Expo Night</a>
+                  <div class="meta">
+                    <span class="date">Technology Consulting</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/solidcraft-countertops.png" class="bordered" alt="Solidcraft Countertops">
+                </div>
+                <div class="content">
+                  <a class="header">Solidcraft Countertops</a>
+                  <div class="meta">
+                    <span class="date">CMS Website</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
+              <div class="ui card">
+                <div class="image">
+                  <img src="img/blood-and-bergamot.png" class="bordered" alt="Blood and Bergamot">
+                </div>
+                <div class="content">
+                  <a class="header">Blood and Bergamot</a>
+                  <div class="meta">
+                    <span class="date">E-Commerce</span>
+                  </div>
+                </div>
+                <a href="" class="ui bottom attached inverted primary button">
+                  <i class="fa fa-tasks"></i>&nbsp;
+                  View project
+                </a>
+              </div>
             </div>
           </div>
         </div>

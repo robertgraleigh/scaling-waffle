@@ -2,6 +2,11 @@
   display: none;
 }
 
+header {
+  border-radius: 0px !important;
+  margin-top: 60px;
+}
+
 .masthead.segment {
   min-height: 700px;
   padding: 1em 0em;
@@ -13,8 +18,8 @@
   margin-left: 0.5em;
 }
 .masthead h1.ui.header {
-  margin-top: 3em;
-  margin-bottom: 0em;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
   font-size: 4em;
   font-weight: normal;
 }
@@ -83,13 +88,59 @@
   }
 }
 
-.get-started-section {
+header.masthead {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+section.products {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+section.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+section.clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+section.projects {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+section.resources {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+section.blog {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+section.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+section.get-started {
+  padding-top: 60px;
+  padding-bottom: 60px;
   & .ui.centered.header {
     text-transform: uppercase;
     & .blue-underline {
       border-bottom: solid 5px #0099FF;
     }
   }
+}
+
+.uppercase {
+  text-transform: uppercase !important;
 }
 
 .card-icon {
@@ -102,4 +153,25 @@
 
 .fa-blue {
   color: #0066CC;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.cta-bar {
+  background-image: url('img/sayagata.png');
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+div.hidden.content {
+  & .h3 {
+    padding-top: 5px !important;
+    padding-right: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 5px !important;
+  }
 }

@@ -14,7 +14,8 @@
     "babel-preset-env": "^1.6.1",
     "copycat-brunch": "^1.1.0",
     "font-awesome": "^4.7.0",
-    "sass-brunch": "^2.10.4"
+    "sass-brunch": "^2.10.4",
+    "smoothscroll-polyfill": "^0.4.0"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2",

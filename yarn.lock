@@ -3148,10 +3148,6 @@ scss-tokenizer@^0.2.3:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
 
-semantic-ui-icon@^2.2.12:
-  version "2.2.12"
-  resolved "https://registry.yarnpkg.com/semantic-ui-icon/-/semantic-ui-icon-2.2.12.tgz#47e640e0f10ed4308f548aef0e0373786c56aa2c"
-
 semantic-ui-sass@^2.2.11:
   version "2.2.11"
   resolved "https://registry.yarnpkg.com/semantic-ui-sass/-/semantic-ui-sass-2.2.11.tgz#f77677cfc6ebe874f0da29e2787b64facccd1f4b"
@@ -3241,6 +3237,10 @@ skemata@~0.1:
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
+
+smoothscroll-polyfill@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/smoothscroll-polyfill/-/smoothscroll-polyfill-0.4.0.tgz#dcda9fe6e9f5d660b886b79be043d40c68fe57d2"
 
 sntp@1.x.x:
   version "1.0.9"
