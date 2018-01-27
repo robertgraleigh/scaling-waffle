@@ -19,7 +19,7 @@ exports.plugins = {
     options: {
       includePaths: [
         'node_modules/semantic-ui-sass', // import semantic-ui-sass
-        'node_modules/semantic-ui-sass/scss', // import semantic-ui-sass scss
+        'node_modules/sass-semantic-ui/src', // import sass-semantic-ui
         'node_modules/font-awesome/scss', // import font-awesome scss files
         'app/scss/custom' // import custom scss files
       ],

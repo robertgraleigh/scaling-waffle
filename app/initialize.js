@@ -8,7 +8,7 @@
   require(package folder name in node_modules'');
 */
 import 'jquery';
-import 'semantic-ui-sass';
+import 'sass-semantic-ui';
 
 //
 $(function () {

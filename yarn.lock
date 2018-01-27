@@ -3141,6 +3141,10 @@ sass-graph@^2.1.1:
     scss-tokenizer "^0.2.3"
     yargs "^7.0.0"
 
+sass-semantic-ui@^2.2.12-3:
+  version "2.2.12-3"
+  resolved "https://registry.yarnpkg.com/sass-semantic-ui/-/sass-semantic-ui-2.2.12-3.tgz#01b3b79246616f26081e7e94224d55dbe4d0c4bf"
+
 scss-tokenizer@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"

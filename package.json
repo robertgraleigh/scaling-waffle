@@ -15,7 +15,9 @@
     "copycat-brunch": "^1.1.0",
     "font-awesome": "^4.7.0",
     "sass-brunch": "^2.10.4",
+    "sass-semantic-ui": "^2.2.12-3",
     "semantic-ui-icon": "^2.2.12",
+    "semantic-ui-sass": "^2.2.11",
     "smoothscroll-polyfill": "^0.4.0"
   },
   "devDependencies": {
@@ -23,7 +25,6 @@
     "brunch": "^2",
     "clean-css-brunch": "^2",
     "jquery": "^3.3.1",
-    "semantic-ui-sass": "^2.2.11",
     "uglify-js-brunch": "^2"
   },
   "main": "index.js",
