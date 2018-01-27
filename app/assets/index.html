@@ -80,7 +80,7 @@
     </div>
 
     <!-- customized right sidebar menu -->
-    <div id="right-sidebar" class="ui vertical inverted right very wide sidebar menu">
+    <div id="right-sidebar" class="ui vertical inverted right wide sidebar menu">
       <a class="uppercase header item">
         Contact Info
       </a>
@@ -141,7 +141,7 @@
         </a>
     </div>
 
-    <nav class="ui top fixed three item hidden menu">
+    <nav class="ui top three item menu">
       <li class="item">
         <a id="left-sidebar-toggle" class="ui grey">
           <i class="fa fa-bars"></i>
@@ -162,7 +162,7 @@
     </nav>
 
     <!-- -->
-    <nav class="ui top fixed menu hidden">
+    <nav class="ui top fixed menu computer only">
       <div class="left menu">
         <li class="item">
           <a href="index.html">
@@ -216,16 +216,6 @@
             Get Started
           </a>
         </li>
-        <li class="item">
-          <a id="left-sidebar-toggle" class="ui primary button">
-            <i class="sidebar icon"></i>&nbsp;Left Menu
-          </a>
-        </li>
-        <li class="item">
-          <a id="right-sidebar-toggle" class="ui primary button">
-            Right Menu&nbsp;<i class="sidebar icon"></i>
-          </a>
-        </li>
       </div>
     </nav>
 
@@ -242,11 +232,8 @@
               <p class="">
                 IT Project Manager. Frontend Developer. Technology Consultant.
               </p>
-              <a href="#contact" class="ui huge primary inverted button">
-                Contact
-              </a>
-              <a href="#get-started" class="ui huge primary inverted button">
-                Get started
+              <a href="#work" class="ui huge primary inverted button">
+                Work with Robert
               </a>
             </div>
             <div class="column">
@@ -256,34 +243,43 @@
         </div>
       </header>
 
-      <section class="benefits">
+      <section class="work-with-robert">
+        <a id="work"></a>
         <div class="ui container">
-          <div class="ui grid">
-            <div class="column">
-              <div class="ui relaxed divided list">
-                <div class="item">
-                  <i class="fa fa-star star floaticon"></i>
-                  <div class="content">
-                    <a class="header">Semantic-Org/Semantic-UI</a>
-                    <div class="description">Updated 10 mins ago</div>
-                  </div>
+          <div class="ui equal width stackable padded grid">
+            <div class="row">
+              <div class="column">
+                <div class="ui segment">
+                  <h3 class="ui header">IT Project Management</h3>
+                  <a class="ui large primary button">
+                    Learn more
+                  </a>
                 </div>
-                <div class="item">
-                  <span class="middle aligned icon">
-                  <i class="fa fa-star"></i>
-                  </span>
-
-                  <div class="content">
-                    <a class="header">Semantic-Org/Semantic-UI-Docs</a>
-                    <div class="description">Updated 22 mins ago</div>
-                  </div>
+              </div>
+              <div class="column">
+                <div class="ui segment">
+                  <h3 class="ui header">Frontend Development</h3>
+                  <a class="ui large primary button">
+                    Learn more
+                  </a>
                 </div>
-                <div class="item">
-                  <i class="large github middle aligned icon"></i>
-                  <div class="content">
-                    <a class="header">Semantic-Org/Semantic-UI-Meteor</a>
-                    <div class="description">Updated 34 mins ago</div>
-                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column">
+                <div class="ui segment">
+                  <h3 class="ui header">E-Commerce Development</h3>
+                  <a class="ui large primary button">
+                    Learn more
+                  </a>
+                </div>
+              </div>
+              <div class="column">
+                <div class="ui segment">
+                  <h3 class="ui header">Technology Consulting</h3>
+                  <a class="ui large primary button">
+                    Learn more
+                  </a>
                 </div>
               </div>
             </div>
@@ -309,26 +305,32 @@
               </p>
             </div>
             <div class="column">
-              <div class="ui list">
-                <div class="item">
-                  <i class="fa fa-handshake-o fa-5x"></i>
-                  Agile Project Management
+              <div class="ui segments">
+                <div class="ui vertical segment">
+                  <div class="icon-holder">
+                    <i class="fa fa-handshake-o fa-5x"></i>
+                  </div>
                 </div>
-                <div class="item">
-                  <i class="fa fa-handshake-o fa-5x"></i>
-                  Frontend Development
+                <div class="ui vertical segment">
+                  <div class="icon-holder">
+                    <i class="fa fa-handshake-o fa-5x"></i>
+                  </div>
+                  <div class="text-holder" style="display: block;float:right; margin-top:0px;">
+                    <p >
+                      This is the section to the right
+                    </p>
+                  </div>
+
                 </div>
-                <div class="item">
-                  <i class="fa fa-handshake-o fa-5x"></i>
-                  E-Commerce Shops
+                <div class="ui vertical segment">
+                  <div class="icon-holder">
+                    <i class="fa fa-handshake-o fa-5x"></i>
+                  </div>
                 </div>
-                <div class="item">
-                  <i class="fa fa-handshake-o fa-5x"></i>
-                  Technology Consulting
-                </div>
-                <div class="item">
-                  <i class="fa fa-handshake-o fa-5x"></i>
-                  Inline Text
+                <div class="ui vertical segment">
+                  <div class="icon-holder">
+                    <i class="fa fa-handshake-o fa-5x"></i>
+                  </div>
                 </div>
               </div>
             </div>
@@ -433,7 +435,7 @@
                   </div>
                 </div>
                 <div class="content">
-                  <a class="header">Single Page Site</a>
+                  <h3 class="header">Single Page Website</h3>
                   <div class="meta">
                     <span class="date">Website</span>
                   </div>
@@ -1477,8 +1479,8 @@ Managing and updating your website is essential to maintaing your website's effe
               <h4 class="ui inverted header">
                 Test header
               </h4>
-              <ul class="ui inverted link list">
-                <li>
+              <div class="ui inverted relaxed list">
+                <div>
                   <a href="mailto:robert@robertgraleigh.com">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-square fa-blue fa-stack-2x"></i>
@@ -1486,8 +1488,8 @@ Managing and updating your website is essential to maintaing your website's effe
                     </span>
                     robert@robertgraleigh.com
                   </a>
-                </li>
-                <li>
+                </div>
+                <div>
                   <a href="tel:+15037659356">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-square fa-blue fa-stack-2x"></i>
@@ -1495,8 +1497,8 @@ Managing and updating your website is essential to maintaing your website's effe
                     </span>
                     +1 (503) 765-9356
                   </a>
-                </li>
-                <li>
+                </div>
+                <div>
                   <a href="https://www.slack.com" target="_blank">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-square fa-blue fa-stack-2x"></i>
@@ -1504,8 +1506,8 @@ Managing and updating your website is essential to maintaing your website's effe
                     </span>
                     @RobertGRaleigh
                   </a>
-                </li>
-                <li>
+                </div>
+                <div>
                   <a href="#top" data-smooth-scroll>
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-square fa-blue fa-stack-2x"></i>
@@ -1513,8 +1515,8 @@ Managing and updating your website is essential to maintaing your website's effe
                     </span>
                     &nbsp;Back to top
                   </a>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
