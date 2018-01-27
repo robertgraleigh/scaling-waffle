@@ -180,3 +180,17 @@ div.hidden.content {
     padding-left: 5px !important;
   }
 }
+
+.ui.move.reveal .hidden.content{
+    -webkit-transform: translateX(-100%)!important;
+    -ms-transform: translateX(-100%)!important;
+    transform: translateX(-100%)!important;
+}
+.ui.move.reveal:hover .hidden.content{
+    -webkit-transform: translateX(1%)!important;
+    -ms-transform: translateX(1%)!important;
+    transform: translateX(1%)!important;
+}
+.ui.move.reveal>.content {
+    display: block!important;
+}
