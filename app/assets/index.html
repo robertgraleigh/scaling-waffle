@@ -11,6 +11,14 @@
     <script>
     $(document).ready(function() {
 
+      $('.ui.dropdown')
+        .dropdown()
+      ;
+
+      $('a#show-about-modal').click(function() {
+        $('#about-modal').modal('show')
+      });
+
       $('a#show-client-modal').click(function() {
         $('#client-modal').modal('show')
       });
@@ -354,6 +362,60 @@
         </div>
         <div class="ui container">
           <div class="ui grid">
+            <div class="ui six wide column">
+              <div class="ui segments">
+                <div class="ui raised segment">
+                  <h3>Additional Information</h3>
+                </div>
+                <div class="ui segments">
+                  <div class="ui segment">
+                    <a id="#show-about-modal" class="ui blue expanded button">Experience</a>
+                  </div>
+                  <div class="ui segment">
+                    <a id="show-client-modal" class="ui huge primary button">
+                      Experience
+                    </a>
+                  </div>
+                  <div class="ui segment">
+                    <a id="show-client-modal" class="ui huge primary button">
+                      Volunteer
+                    </a>
+                  </div>
+                  <div class="ui segment">
+                    <a id="show-client-modal" class="ui huge primary button">
+                      Soft Skills
+                    </a>
+                  </div>
+                  <div class="ui segment">
+                    <a id="show-client-modal" class="ui huge primary button">
+                      Software
+                    </a>
+                  </div>
+                  <div class="ui segment">
+                    <a id="show-client-modal" class="ui huge primary button">
+                      Education
+                    </a>
+                  </div>
+                </div>
+                <div class="ui segment">
+                  <p>Middle</p>
+                </div>
+                <div class="ui horizontal segments">
+                  <div class="ui segment">
+                    <p>Top</p>
+                  </div>
+                  <div class="ui segment">
+                    <p>Middle</p>
+                  </div>
+                  <div class="ui segment">
+                    <p>Bottom</p>
+                  </div>
+                </div>
+                <div class="ui segment">
+                  <p>Bottom</p>
+                </div>
+              </div>
+            </div>
             <div class="ui six wide centered column">
               <div class="ui raised very padded text container segment">
                 <h2 class="ui header">
@@ -377,6 +439,20 @@
                   Outside of work, I’m passionate about songwriting,slide blues guitar, and intergenerational learning.
                   Most Sundays, I can be found in the yellow or blue room at Powell’s Books, looking for the next great mystery or short story writer.
                 </p>
+                <div class="ui selection dropdown">
+                  <input type="hidden" name="gender">
+                  <i class="dropdown icon"></i>
+                  <div class="default text">About Robert</div>
+                  <div class="menu">
+                    <a id="#show-about-modal" class="item" data-value="0">About Robert</a>
+                    <a href="#contact" class="item" data-value="1">Experience</a>
+                    <a href="#contact" class="item" data-value="2">Volunteer</a>
+                    <a href="#" class="item" data-value="3">Soft Skills</a>
+                    <a href="#" class="item" data-value="4">Technical Skills</a>
+                    <a href="#" class="item" data-value="5">Software</a>
+                    <a href="#" class="item" data-value="6">Education</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1019,31 +1095,15 @@ Managing and updating your website is essential to maintaing your website's effe
                 </div>
               </div>
               <div class="content">
-                <a class="header">Frontend Languages</a>
+                <h3 class="ui header">Frontend Languages</h3>
                 <div class="meta">
                   <span class="ui blue label">Resource</span>
                 </div>
               </div>
             </div>
             <div class="ui card">
-              <div class="ui slide masked reveal image">
+              <div class="ui image">
                 <img src="img/css-pre-processors.png" class="visible content" alt="CSS Preprocessors" />
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <ul>
-                    <li>
-                      Sass
-                    </li>
-                    <li>
-                      Less
-                    </li>
-                    <li>
-                      Stylus
-                    </li>
-                  </ul>
-                </div>
               </div>
               <div class="content">
                 <a class="header">CSS Preprocessors</a>
@@ -1055,25 +1115,6 @@ Managing and updating your website is essential to maintaing your website's effe
             <div class="ui card">
               <div class="ui slide masked reveal image">
                 <img src="img/css-frameworks.png" class="visible content" alt="CSS Frameworks" />
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <ul>
-                    <li>
-                      Bootstrap
-                    </li>
-                    <li>
-                      Foundation
-                    </li>
-                    <li>
-                      Semantic UI
-                    </li>
-                    <li>
-                      Material CSS
-                    </li>
-                  </ul>
-                </div>
               </div>
               <div class="content">
                 <a class="header">CSS Frameworks</a>
@@ -1083,27 +1124,8 @@ Managing and updating your website is essential to maintaing your website's effe
               </div>
             </div>
             <div class="ui card">
-              <div class="ui slide masked reveal image">
-                <img src="img/js-frameworks.png" class="visible content" alt="JS Frameworks" />
-                <div class="hidden content">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <ul>
-                    <li>
-                      Bootstrap
-                    </li>
-                    <li>
-                      Foundation
-                    </li>
-                    <li>
-                      Semantic UI
-                    </li>
-                    <li>
-                      Material CSS
-                    </li>
-                  </ul>
-                </div>
+              <div class="ui image">
+                <img src="img/js-frameworks.png" class="" alt="JS Frameworks" />
               </div>
               <div class="content">
                 <a class="header">JS Frameworks</a>
@@ -1113,16 +1135,8 @@ Managing and updating your website is essential to maintaing your website's effe
               </div>
             </div>
             <div class="ui card">
-              <div class="ui slide masked reveal image">
+              <div class="ui image">
                 <img src="img/build-tools.png" class="visible content" alt="Build Tools" />
-                <div class="hidden content" style="padding: 5px;">
-                  <h3 class="header">
-                    Client Name
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
               </div>
               <div class="content">
                 <a class="header">Build Tools</a>
@@ -1132,16 +1146,8 @@ Managing and updating your website is essential to maintaing your website's effe
               </div>
             </div>
             <div class="ui card">
-              <div class="ui slide masked reveal image">
+              <div class="ui image">
                 <img src="img/hosting.png" class="visible content" alt="Hosting" />
-                <div class="hidden content">
-                  <h3 class="header">
-                    Hosting
-                  </h3>
-                  <p class="description">
-                    this is the hidden content
-                  </p>
-                </div>
               </div>
               <div class="content">
                 <a class="header">Hosting</a>
@@ -1440,51 +1446,65 @@ Managing and updating your website is essential to maintaing your website's effe
         </div>
       </section>
 
-      <nav class="secondary-nav">
-        <div class="ui container">
-          <div class="ui one column grid full">
-            <div class="column">
-              <div class="ui horizontal inverted white list">
-                <a href="index.html" class="item">Home</a>
-                <a href="#about" class="item">About</a>
-                <a href="#services" class="item">Services</a>
-                <a href="#resources" class="item">Resources</a>
-                <a href="#blog" class="item">Blog</a>
-                <a href="#contact" class="item">Contact</a>
-                <a href="#get-started" class="item">Get Started</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       <!-- -->
       <div class="ui inverted vertical footer segment">
         <a id=""></a>
         <div class="ui container">
-          <div class="ui inverted equal height stackable centered grid">
+          <div class="ui sixteen wide inverted equal height stackable centered grid">
+            <div class="row">
+              <div class="sixteen wide column">
+                <div class="ui inverted segment">
+                  <div class="ui fluid inverted secondary menu">
+                    <a href="#about-robert" class="blue item">
+                      About
+                    </a>
+                    <a href="#products" class="ui blue item">
+                      Products
+                    </a>
+                    <a href="#services" class="ui blue item">
+                      Services
+                    </a>
+                    <a href="#clients" class="ui blue item">
+                      Clients
+                    </a>
+                    <a href="#projects" class="ui blue item">
+                      Projects
+                    </a>
+                    <a href="#resources" class="ui blue item">
+                      Resources
+                    </a>
+                    <a href="#blog" class="ui blue item">
+                      Blog
+                    </a>
+                    <a href="#contact" class="ui blue item">
+                      Contact
+                    </a>
+                    <a href="#get-started" class="ui blue item">
+                      Get Started
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="row">
               <div class="four wide column">
-                <img src="img/profile-picture-thumbnail.png" class="ui bordered image" alt="Robert G. Raleigh" />
+                <img src="img/profile-picture-thumbnail.png" class="ui centered bordered image" alt="Robert G. Raleigh" />
               </div>
               <div class="six wide column">
                 <h4 class="ui inverted header">
                   About Robert G. Raleigh
                 </h4>
                 <p class="">
-                  Robert G. Raleigh is an IT project manager, frontend developer, and freelance technology consultant.
+                  Robert G. Raleigh is an IT project manager, frontend developer, and freelance technology consultant based in Portland, OR.
                 </p>
                 <p class="">
                   Robert has 10+ years of project management and team leadership
                   experience working in Oregon's technology, nonprofit, education, and creative sectors.
                 </p>
-                <p class="">
-                  Robert lives and works in Portland, OR.
-                </p>
               </div>
               <div class="six wide column">
                 <h4 class="ui inverted header">
-                  Test header
+                  Contact Infos
                 </h4>
                 <div class="ui inverted relaxed list">
                   <div>
@@ -1563,6 +1583,243 @@ Managing and updating your website is essential to maintaing your website's effe
               </div>
             </div>
 
+          </div>
+        </div>
+      </div>
+
+      <!-- custom client-modal component -->
+      <div id="about-modal" class="ui modal">
+        <div class="header">
+          <div class="ui container">
+            <div class="ui two column grid">
+              <div class="ui column">
+                <h2 class="ui header">Robert G. Raleigh</h2>
+              </div>
+              <div class="ui column">
+                <div class="ui column">
+                  <div class="ui selection dropdown">
+                    <input type="hidden" name="gender">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">About Robert</div>
+                    <div class="menu">
+                      <a href="#contact" class="item" data-value="1">About Robert</a>
+                      <a href="#contact" class="item" data-value="1">Experience</a>
+                      <a href="#contact" class="item" data-value="1">Volunteer</a>
+                      <a href="#" class="item" data-value="0">Soft Skills</a>
+                      <a href="#" class="item" data-value="">Technical Skills</a>
+                      <a href="#" class="item" data-value="">Software</a>
+                      <a href="#" class="item" data-value="">Education</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scrolling content">
+          <div class="ui container">
+            <div class="ui stackable internally grid">
+              <div class="ui row">
+                <div class="twelve wide column">
+                  <h3 class="ui header">IT PROJECT MANAGER</h3>
+                </div>
+                <div class="four wide column">
+                  PORTLAND, OR
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="twelve wide column">
+                  <h3 class="ui header">HELLO WORLD DEVS</h3>
+                </div>
+                <div class="four wide column">
+                  <h3 class="ui header">
+                    AUG 2016 - PRESENT
+                  </h3>
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="sixteen wide column">
+                  <div class="ui list">
+                   <div class="ui item">
+                     Led 9 person team in development of 80+ projects from initiation to launch
+                   </div>
+                   <div class="ui item">
+                     Managed ongoing roster of 5 – 7 projects with budgets of $5,000 – $250,000
+                   </div>
+                   <div class="ui item">
+                     Facilitated company-wide use of agile methodology using Jira and Confluence
+                   </div>
+                 </div>
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="twelve wide column">
+                  <h3 class="ui header">Executive Director</h3>
+                </div>
+                <div class="four wide column">
+                  PORTLAND, OR
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="twelve wide column">
+                  <h3 class="ui header">Log Camp at Impact NW</h3>
+                </div>
+                <div class="four wide column">
+                  <h3 class="ui header">
+                    OCT 2012 - MAR 2016
+                  </h3>
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="sixteen wide column">
+                  <div class="ui list">
+                   <div class="ui item">
+                     Led 9 person team in development of 80+ projects from initiation to launch
+                   </div>
+                   <div class="ui item">
+                     Managed ongoing roster of 5 – 7 projects with budgets of $5,000 – $250,000
+                   </div>
+                   <div class="ui item">
+                     Facilitated company-wide use of agile methodology using Jira and Confluence
+                   </div>
+                 </div>
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="twelve wide column">
+                  <h3 class="ui header">Event Manager</h3>
+                </div>
+                <div class="four wide column">
+                  CORVALLIS, OR
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="twelve wide column">
+                  <h3 class="ui header">Technology Association of Oregon</h3>
+                </div>
+                <div class="four wide column">
+                  <h3 class="ui header">
+                    MAR 2009 - NOV 2009
+                  </h3>
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="sixteen wide column">
+                  <div class="ui list">
+                   <div class="ui item">
+                     Delivered 20+ full-stack web development projects, with project budgets from $3,000 to $20,000.
+                     Designed brand identities for 7 small and mid-size businesses
+                     Accomplishment One should not need to cross two lines
+                   </div>
+                   <div class="ui item">
+                     Managed ongoing roster of 5 – 7 projects with budgets of $5,000 – $250,000
+                   </div>
+                   <div class="ui item">
+                     Facilitated company-wide use of agile methodology using Jira and Confluence
+                   </div>
+                 </div>
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="twelve wide column">
+                  <h3 class="ui header">Technology Community Relations</h3>
+                </div>
+                <div class="four wide column">
+                  Corvallis, OR
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="twelve wide column">
+                  <h3 class="ui header">Corvallis Chamber of Commerce</h3>
+                </div>
+                <div class="four wide column">
+                  <h3 class="ui header">
+                    MAR 2009 - NOV 2009
+                  </h3>
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="sixteen wide column">
+                  <div class="ui list">
+                   <div class="ui item">
+                     Led 9 person team in development of 80+ projects from initiation to launch
+                   </div>
+                   <div class="ui item">
+                     Managed ongoing roster of 5 – 7 projects with budgets of $5,000 – $250,000
+                   </div>
+                   <div class="ui item">
+                     Facilitated company-wide use of agile methodology using Jira and Confluence
+                   </div>
+                 </div>
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="twelve wide column">
+                  <h3 class="ui header">Frontend Developer</h3>
+                </div>
+                <div class="four wide column">
+                  PORTLAND, OR
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="twelve wide column">
+                  <h3 class="ui header">RGR Digital, LLC.</h3>
+                </div>
+                <div class="four wide column">
+                  <h3 class="ui header">
+                    Jan 2007 - PRESENT
+                  </h3>
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="sixteen wide column">
+                  <div class="ui list">
+                   <div class="ui item">
+                     Led 9 person team in development of 80+ projects from initiation to launch
+                   </div>
+                   <div class="ui item">
+                     Managed ongoing roster of 5 – 7 projects with budgets of $5,000 – $250,000
+                   </div>
+                   <div class="ui item">
+                     Facilitated company-wide use of agile methodology using Jira and Confluence
+                   </div>
+                 </div>
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="twelve wide column">
+                  <h3 class="ui header">Shift Leader/Trainer</h3>
+                </div>
+                <div class="four wide column">
+                  PORTLAND, OR
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="twelve wide column">
+                  <h3 class="ui header">Oregon Health Sciences University</h3>
+                </div>
+                <div class="four wide column">
+                  <h3 class="ui header">
+                    Sep 2004- Jan 2007
+                  </h3>
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="sixteen wide column">
+                  <div class="ui list">
+                   <div class="ui item">
+                     Led 9 person team in development of 80+ projects from initiation to launch
+                   </div>
+                   <div class="ui item">
+                     Managed ongoing roster of 5 – 7 projects with budgets of $5,000 – $250,000
+                   </div>
+                   <div class="ui item">
+                     Facilitated company-wide use of agile methodology using Jira and Confluence
+                   </div>
+                 </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
