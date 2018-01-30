@@ -143,8 +143,12 @@ section.get-started {
   text-transform: uppercase !important;
 }
 
-.card-icon {
-  font-size: 5em !important;
+.font-icon {
+  font-size: 4em !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .blue-underline {
@@ -161,8 +165,8 @@ section.get-started {
 
 .cta-bar {
   background-image: url('img/sayagata.png');
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -206,5 +210,5 @@ section {
 }
 
 .segment {
-  border-radius: 0px;
+  border-radius: 0px !important;
 }
