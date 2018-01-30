@@ -57,10 +57,11 @@
       });
     </script>
   </head>
-  <body class="site">
+  <body>
+
     <!-- customized left sidebar menu -->
     <div id="left-sidebar" class="ui vertical inverted left sidebar menu">
-      <a href="index.html" class="active item">
+      <a href="index.html" class="item">
         Home
       </a>
       <a href="#about" class="item">
@@ -146,80 +147,95 @@
             Portland, OR 97214
           </address>
         </a>
-    </div>
-
-    <nav class="ui top three item menu">
-      <li class="item">
-        <a id="left-sidebar-toggle" class="ui grey">
-          <i class="fa fa-bars"></i>
-          Menu
-        </a>
-      </li>
-      <li class="item">
-        <a href="index.html" class="ui header">
-          Robert G. Raleigh
-        </a>
-      </li>
-      <li class="item">
-        <a id="right-sidebar-toggle" class="ui grey">
-          Contact
-          <i class="fa fa-comments-o"></i>
-        </a>
-      </li>
-    </nav>
-
-    <!-- -->
-    <nav class="ui top fixed menu computer only">
-      <div class="left menu">
-        <li class="ui uppercase header item">
-          <a href="index.html">
-            Robert G. Raleigh
-          </a>
-        </li>
-        <li class="ui uppercase item">
-          <a href="#about">
-            About
-          </a>
-        </li>
-        <li class="ui uppercase item">
-          <a href="#how-we-work">
-            How We Work
-          </a>
-        </li>
-        <li class="ui uppercase item">
-          <a href="#products">
-            Products
-          </a>
-        </li>
-        <li class="ui uppercase item">
-          <a href="#services">
-            Services
-          </a>
-        </li>
-        <li class="ui uppercase item">
-          <a href="#clients">
-            Clients
-          </a>
-        </li>
-        <li class="ui uppercase item">
-          <a href="#projects">
-            Projects
-          </a>
-        </li>
       </div>
-      <div class="right menu">
-        <li class="ui item">
-          <a href="#contact" class="ui uppercase secondary button">
-            Contact
-          </a>
-        </li>
-        <li class="item">
-          <a href="#get-started" class="ui uppercase primary button">
-            Get Started
-          </a>
-        </li>
+
+      <div class="ui container">
+      	<div class="ui grid">
+        	<div class="large computer only row">
+        		<div class="column">
+        			<div class="ui fixed menu">
+                <div class="left menu">
+                  <a href="index.html" class="ui header item">
+                    Robert G. Raleigh
+                  </a>
+                  <a href="#about" class="ui item">
+                    About
+                  </a>
+                  <a href="#how-we-work" class="ui item">
+                    How We Work
+                  </a>
+                  <a href="#products" class="ui item">
+                    Products
+                  </a>
+                  <a href="#services" class="ui item">
+                    Services
+                  </a>
+                  <a href="#clients" class="ui item">
+                    Clients
+                  </a>
+                  <a href="#projects" class="ui item">
+                    Projects
+                  </a>
+                </div>
+                <div class="right menu">
+                  <div class="ui item">
+                    <a href="#contact" class="ui uppercase secondary button">
+                      Contact
+                    </a>
+                  </div>
+                  <div class="ui item">
+                    <a href="#get-started" class="ui uppercase primary button">
+                      Get Started
+                    </a>
+                  </div>
+                </div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="tablet only row">
+        		<div class="column">
+        			<div class="ui fixed top menu">
+                <div class="ui item">
+                  <a class="left-sidebar-toggle">
+                    <i class="fa fa-bars"></i>
+                    Menu
+                  </a>
+                </div>
+                <div class="ui header item">
+                  <a id="index.html">Home</a>
+                </div>
+                <div class="ui item">
+                  <a class="right-sidebar-toggle">
+                    Contact
+                    <i class="fa fa-comments-o"></i>
+                  </a>
+                </div>
+        			</div>
+        		</div>
+        	</div>
+          <div class="mobile only row">
+        		<div class="column">
+        			<div class="ui fixed top menu">
+                <div class="ui item">
+                  <a class="left-sidebar-toggle">
+                    <i class="fa fa-bars"></i>
+                    Menu
+                  </a>
+                </div>
+                <div class="ui header item">
+                  <a id="index.html">Home</a>
+                </div>
+                <div class="ui item">
+                  <a class="right-sidebar-toggle">
+                    Contact
+                    <i class="fa fa-contact-o"></i>
+                  </a>
+                </div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
       </div>
-    </nav>
 
     <!-- -->
     <div class="pusher">
@@ -1006,14 +1022,16 @@ I provide custom, easily managed and maintained CMS websites built on the indust
       <section class="contact-section">
         <a id="contact"></a>
         <div class="ui container">
-          <div class="ui one column grid">
-            <div class="column">
-              <h2 class="ui centered large uppercase header">
-                <span class="blue-underline">Contact</span>
-              </h2>
-              <h3 class="ui centered header">
-                Reach out with any questions or opportunities you have. We'll provide an initial response within one business day.
-              </h3>
+          <div class="ui fluid grid">
+            <div class="row">
+              <div class="column">
+                <h2 class="ui centered large uppercase header">
+                  <span class="blue-underline">Contact</span>
+                </h2>
+                <h3 class="ui centered header">
+                  Reach out with any questions or opportunities you have. We'll provide an initial response within one business day.
+                </h3>
+              </div>
             </div>
           </div>
         </div>
@@ -1127,19 +1145,23 @@ I provide custom, easily managed and maintained CMS websites built on the indust
       </section>
 
       <!-- custom get started component -->
-      <section class="ui inverted grey segment">
+      <section class="">
         <a id="get-started"></a>
         <div class="ui container">
-          <div class="ui one column relaxed grid">
+          <div class="ui grid">
             <div class="ui row">
-              <div class="column">
-                <h2 class="ui centered uppercase inverted header">
+              <div class="ui sixteen wide column">
+                <h2 class="ui centered uppercase header">
                   <span class="blue-underline">
-                    Get Started
+                    Let's Get Started!
                   </span>
                 </h2>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="ui container">
+          <div class="ui grid">
             <div class="ui row">
               <div class="ui three stackable cards">
                 <div class="ui card">
@@ -1207,41 +1229,6 @@ I provide custom, easily managed and maintained CMS websites built on the indust
         <a id=""></a>
         <div class="ui container">
           <div class="ui sixteen wide inverted equal height stackable centered grid">
-            <div class="row">
-              <div class="sixteen wide column">
-                <div class="ui inverted segment">
-                  <div class="ui fluid inverted secondary centered menu">
-                    <a href="index.html" class="blue item">
-                      Robert G. Raleigh
-                    </a>
-                    <a href="#about-robert" class="blue item">
-                      About
-                    </a>
-                    <a href="#how-we-work" class="ui blue item">
-                      How We Work
-                    </a>
-                    <a href="#products" class="ui blue item">
-                      Products
-                    </a>
-                    <a href="#services" class="ui blue item">
-                      Services
-                    </a>
-                    <a href="#clients" class="ui blue item">
-                      Clients
-                    </a>
-                    <a href="#projects" class="ui blue item">
-                      Projects
-                    </a>
-                    <a href="#contact" class="ui blue item">
-                      Contact
-                    </a>
-                    <a href="#get-started" class="ui blue item">
-                      Get Started
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="row">
               <div class="four wide column">
                 <img src="img/profile-picture-thumbnail.png" class="ui centered bordered image" alt="Robert G. Raleigh" />
