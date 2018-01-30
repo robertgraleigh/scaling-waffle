@@ -1,11 +1,19 @@
-header {
-  border-radius: 0px !important;
-  margin-top: 60px;
+@mixin margin($top: null, $right: null, $bottom: null, $left: null) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
 }
 
-header.masthead {
-  padding-top: 60px;
-  padding-bottom: 60px;
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+header.primary-header {
+  @include padding($top: 100px, $bottom: 100px);
 }
 
 section.products {
@@ -119,11 +127,12 @@ p.copyright-notice {
   vertical-align: middle;
 }
 
-section {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
 .segment {
   border-radius: 0px !important;
+}
+
+div.ui.top.fixed.borderless.menu {
+  & a.ui.header.item {
+    text-decoration: underline;
+  }
 }
